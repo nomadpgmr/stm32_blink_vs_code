@@ -1,7 +1,7 @@
 #include "mbed.h"
 
 DigitalOut led1(LED1);
-DigitalOut led4_blue_led(LED4);
+// DigitalOut led4_blue_led(LED4);
 // Serial pc(USBTX, USBRX);
 
 class MyLed
@@ -28,7 +28,7 @@ class MyLed
 int main()
 {
 
-   led4_blue_led = 1; // 0 == on
+   // led4_blue_led = 1; // 0 == on
    
    MyLed *myled = new MyLed();
    while (1)
