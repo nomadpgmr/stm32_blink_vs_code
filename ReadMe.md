@@ -14,6 +14,8 @@ The following 3rd party tools need to be installed.
 * OpenOCD <http://www.freddiechopin.info/en/download/category/4-openocd>
 * MBED sample code for the STM32 LED Blink Program.
 
+* Make sure you have updated the STLink firmware on the development board to the latest version.
+
 ## MBED Compiler and Sample Code
 
 You will need an mbed.com compiler account. This gives you access to various sample programs for the STM32L475 MCU.
