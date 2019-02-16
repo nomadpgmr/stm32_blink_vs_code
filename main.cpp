@@ -1,5 +1,7 @@
 #include "mbed.h"
 
+Serial pc(USBTX, USBRX);
+
 DigitalOut led1(LED1);
 
 class MyLed
@@ -20,22 +22,28 @@ class MyLed
       led1 = 0;
       wait(delay);
    }
+   void run()
+   {
+      while (1)
+      {
+         blink(0.2);
+         blink(0.2);
+         blink(0.2);
+         blink(0.2);
+         blink(0.2);
+         wait(1.0);
+         blink(0.2);
+         wait(1.0);
+      };
+   }
 };
 
 int main()
 {
-
+   // Add breakpoint here to prevent exceptions
    MyLed *myled = new MyLed();
-   while (1)
-   {
-      myled->blink(0.2);
-      myled->blink(0.2);
-      myled->blink(0.2);
-      wait(1.0);
-      myled->blink(0.2);
-      wait(1.0);
-   };
-
+   pc.printf("Hello World\r\n");
+   myled->run();
    free(myled);
 
 }
